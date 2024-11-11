@@ -5,7 +5,7 @@ $titulo = 'Tienda Oink!';
 $contenido = <<<EOS
         <article>
             <section>
-                <h1>PRINCIPAL</h1>   
+                <h1>PAGINA PRINCIPAL</h1>   
             </section>
         </article>
     EOS;
