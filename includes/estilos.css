@@ -1,0 +1,80 @@
+/* General */
+* {
+  font-family: 'Trebuchet MS';
+}
+
+a:link, 
+a:visited, 
+a:hover, 
+a:active {
+  color: black; /* or specify your desired color */
+}
+
+/* header */
+div.cabecera {
+  background-color: white;
+  font-weight: bold;
+  text-align: center;
+  padding: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+div.cabecera nav {
+  width: 65%;
+}
+
+nav.indice button{
+  min-width: 12%;
+  font-size: 20px;
+  margin: 1%;
+  padding: 20px;
+  background: linear-gradient(to right, #9beeee 0%, #e996e9 100%);
+  border-radius: 10px;
+  border: 0px;
+}
+
+div#logoOink {
+  width: 30%;
+  padding: 3%;
+}
+
+div#logoOink img{
+  width: 50%;
+}
+
+div#redes{
+  width: 5%;
+}
+
+div#redes img{
+  width: 35%;
+}
+
+/* main */
+
+body {
+  margin: 0px;
+  padding: 0px;
+  background-color: rgb(215, 216, 181);
+}
+
+/*pie*/
+
+div.pie {
+  line-height: 30px;
+  padding: 40px;
+  padding-left: 0px;
+  width: 100%;
+  background-color: rgb(190, 190, 190);
+  position: fixed;
+  bottom: 0;
+  border-top: 3px solid black;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  justify-content: space-evenly;
+}
+
+
