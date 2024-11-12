@@ -1,6 +1,6 @@
 /* General */
 * {
-  font-family: 'Trebuchet MS';
+  font-family: 'Calibri';
   box-sizing: border-box; /* Asegura que el padding y border no afecten el tamaño total del elemento */
 }
 
@@ -8,7 +8,7 @@ a:link,
 a:visited, 
 a:hover, 
 a:active {
-  color: black; /* o especifica tu color deseado */
+  color: black;
 }
 
 /* header */
@@ -68,27 +68,26 @@ div#principal {
   display: flex;
   align-items: center;
   justify-content: center;
-  background-color: black;
+  background-color: rgb(50, 50, 50);
 }
 
 div#principal img {
-  opacity: 70%;
+  opacity: 85%;
   width: 100%;
   padding: 0px;
-  display: block; /* Eliminar espacio blanco debajo de la imagen */
+  display: block;
 }
 
-/* Estilo para el título y el párrafo */
 div#principal h1, div#principal p {
-  position: absolute;  /* Los elementos se posicionan sobre la imagen */
-  z-index: 10; /* Asegura que el texto quede por encima de la imagen */
+  position: absolute;
+  z-index: 10;
   color: white;
 }
 
 div#principal h1 {
   font-size: 5em;
   margin: 0;
-  top: 80px; /* Asegura que el texto se separe un poco de la parte superior */
+  top: 80px;
 }
 
 div#principal p {
@@ -102,9 +101,9 @@ div#pincipal2 {
   padding: 50px;
   display: flex;
   flex-wrap: wrap;
-  justify-content: center;  /* Centra los elementos horizontalmente */
-  align-items: center;      /* Centra los elementos verticalmente */
-  text-align: center;       /* Centra el texto dentro de cada elemento */
+  justify-content: center;  
+  align-items: center;      
+  text-align: center;       
 }
 
 div#pincipal2 > h1 {
@@ -114,13 +113,43 @@ div#pincipal2 > h1 {
 }
 div#pincipal2 > p,
 div#pincipal2 > div {
-  width: 100%; /* Hace que cada elemento ocupe toda la línea */
+  width: 100%; 
 }
 
 div#cuadricula img {
-  width: 400px; /* Establece el tamaño de la imagen */
+  width: 400px; 
 }
 
+/*nosotros*/
+div#nosotros {
+  font-size: 20px;
+  padding-left: 15%;
+  padding-right: 15%;
+  justify-items: center;
+}
+
+div#nosotros h1, h2 {
+  padding: 2%;
+}
+
+div#nosotros img {
+  max-width: 300px;
+  min-height: 300px;
+  max-width: 500px;
+  min-width: 500px;
+}
+
+div.nos {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  text-align: justify;
+  gap: 50px;
+}
+
+div.nos p{
+  padding: 40px;
+}
 
 /*pie*/
 div.pie {
