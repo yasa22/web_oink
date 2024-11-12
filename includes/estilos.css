@@ -1,13 +1,14 @@
 /* General */
 * {
   font-family: 'Trebuchet MS';
+  box-sizing: border-box; /* Asegura que el padding y border no afecten el tamaño total del elemento */
 }
 
 a:link, 
 a:visited, 
 a:hover, 
 a:active {
-  color: black; /* or specify your desired color */
+  color: black; /* o especifica tu color deseado */
 }
 
 /* header */
@@ -57,24 +58,85 @@ div#redes img{
 body {
   margin: 0px;
   padding: 0px;
-  background-color: rgb(215, 216, 181);
 }
 
-/*pie*/
+/*principal*/
+div#principal {
+  position: relative;  /* Necesario para que los elementos hijos con position: absolute se ubiquen dentro de este contenedor */
+  color: white;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: black;
+}
 
+div#principal img {
+  opacity: 70%;
+  width: 100%;
+  padding: 0px;
+  display: block; /* Eliminar espacio blanco debajo de la imagen */
+}
+
+/* Estilo para el título y el párrafo */
+div#principal h1, div#principal p {
+  position: absolute;  /* Los elementos se posicionan sobre la imagen */
+  z-index: 10; /* Asegura que el texto quede por encima de la imagen */
+  color: white;
+}
+
+div#principal h1 {
+  font-size: 5em;
+  margin: 0;
+  top: 80px; /* Asegura que el texto se separe un poco de la parte superior */
+}
+
+div#principal p {
+  font-size: 1.5em;
+  margin: 0;
+  top: 360px;
+}
+
+div#pincipal2 {
+  font-size: 20px;
+  padding: 50px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;  /* Centra los elementos horizontalmente */
+  align-items: center;      /* Centra los elementos verticalmente */
+  text-align: center;       /* Centra el texto dentro de cada elemento */
+}
+
+div#pincipal2 > h1 {
+  width: 100%;
+  font-size: 40px;
+  font-weight: bold;
+}
+div#pincipal2 > p,
+div#pincipal2 > div {
+  width: 100%; /* Hace que cada elemento ocupe toda la línea */
+}
+
+div#cuadricula img {
+  width: 400px; /* Establece el tamaño de la imagen */
+}
+
+
+/*pie*/
 div.pie {
   line-height: 30px;
   padding: 40px;
   padding-left: 0px;
   width: 100%;
+  max-width: 100%; /* Asegura que no exceda el ancho de la pantalla */
   background-color: rgb(190, 190, 190);
-  position: fixed;
+  position: relative;
   bottom: 0;
   border-top: 3px solid black;
   display: flex;
   justify-content: space-between;
   align-items: flex-start;
   justify-content: space-evenly;
+  box-sizing: border-box; /* Asegura que el padding no cause desbordamiento */
+  overflow: hidden; /* Evita que el contenido se desborde */
 }
-
-
