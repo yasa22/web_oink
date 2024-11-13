@@ -159,19 +159,19 @@ div#contacto {
   justify-items: center;
   text-align: justify;
   background-color: #ffffff;
-  padding-left: 36%;
-  padding-right: 36%;
+  padding-left: 33%;
+  padding-right: 33%;
   color: #000000;
 }
 
-/* Estilos para los campos de entrada y el área de texto */
+
 div#contacto input[type="text"] {
   width: 49%;
   padding: 10px;
   margin: 10px 0;
   border: 1px solid #ccc;
   border-radius: 5px;
-  font-size: 16px;
+  font-size: 20px;
   box-sizing: border-box;
   background-color: #f8f8f8;
 }
@@ -182,7 +182,7 @@ div#contacto textarea {
   margin: 10px 0;
   border: 1px solid #ccc;
   border-radius: 5px;
-  font-size: 16px;
+  font-size: 20px;
   box-sizing: border-box;
   background-color: #f8f8f8;
 }
@@ -194,13 +194,12 @@ div#contacto .button-group {
   margin-top: 15px;
 }
 
-div#contacto input[type="submit"],
-div#contacto input[type="reset"] {
-  width: 48%;
+div#contacto input[type="submit"] {
+  width: 15%;
   padding: 10px;
   border: none;
-  border-radius: 5px;
-  font-size: 16px;
+  border-radius: 10px;
+  font-size: 20px;
   cursor: pointer;
   color: balck;
 }
