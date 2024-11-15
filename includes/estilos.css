@@ -152,7 +152,6 @@ div.nos p {
 }
 
 /*contacto*/
-
 div#contacto {
   padding: 50px;
   font-size: 20px;
@@ -187,7 +186,6 @@ div#contacto textarea {
   background-color: #f8f8f8;
 }
 
-/* Estilos para los botones */
 div#contacto .button-group {
   display: flex;
   justify-content: space-between;
@@ -210,6 +208,25 @@ div#contacto input[type="submit"] {
 
 div#contacto input[type="submit"]:hover {
   background-color: rgb(150, 150, 150);
+}
+
+/*aviso legal*/
+div#avisoLegal {
+  padding: 50px;
+  font-size: 20px;
+  text-align: justify;
+  background-color: #ffffff;
+  padding-left: 33%;
+  padding-right: 33%;
+  color: #363636;
+}
+
+div#avisoLegal strong {
+  color: black;
+}
+
+div#avisoLegal h1 {
+  text-align: center;
 }
 
 /*pie*/
