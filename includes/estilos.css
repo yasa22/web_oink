@@ -1,12 +1,18 @@
 /* General */
 * {
-  font-family: 'Calibri';
+  font-family: "Calibri";
   box-sizing: border-box; /* Asegura que el padding y border no afecten el tamaño total del elemento */
 }
+h1 {
+  font-size: 2.5em;
+}
+h2 {
+  padding: 3%;
+}
 
-a:link, 
-a:visited, 
-a:hover, 
+a:link,
+a:visited,
+a:hover,
 a:active {
   color: black;
 }
@@ -26,7 +32,7 @@ div.cabecera nav {
   width: 65%;
 }
 
-nav.indice button{
+nav.indice button {
   min-width: 12%;
   font-size: 20px;
   margin: 1%;
@@ -41,23 +47,22 @@ div#logoOink {
   padding: 3%;
 }
 
-div#logoOink img{
+div#logoOink img {
   width: 50%;
 }
 
-div#redes{
+div#redes {
   width: 5%;
 }
 
-div#redes img{
+div#redes img {
   width: 35%;
 }
 
 /* main */
-
 body {
-  margin: 0px;
-  padding: 0px;
+  margin: 0;
+  padding: 0;
 }
 
 /*principal*/
@@ -128,24 +133,17 @@ div#cuadricula img {
   height: auto;
 }
 
-
 /*nosotros*/
 div#nosotros {
+  padding-top: 50px;
   font-size: 20px;
   padding-left: 15%;
   padding-right: 15%;
   justify-items: center;
 }
 
-div#nosotros h1, h2 {
-  padding: 2%;
-}
-
 div#nosotros img {
-  max-width: 300px;
-  min-height: 300px;
-  max-width: 500px;
-  min-width: 500px;
+  width: 40%;
 }
 
 div.nos {
@@ -156,8 +154,86 @@ div.nos {
   gap: 50px;
 }
 
-div.nos p{
+div.nos p {
   padding: 40px;
+}
+
+/*contacto*/
+div#contacto {
+  padding: 50px;
+  font-size: 20px;
+  justify-items: center;
+  text-align: justify;
+  background-color: #ffffff;
+  padding-left: 33%;
+  padding-right: 33%;
+  color: #000000;
+}
+
+
+div#contacto input[type="text"] {
+  width: 49%;
+  padding: 10px;
+  margin: 10px 0;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 20px;
+  box-sizing: border-box;
+  background-color: #f8f8f8;
+}
+div#contacto input[type="email"],
+div#contacto textarea {
+  width: 100%;
+  padding: 10px;
+  margin: 10px 0;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 20px;
+  box-sizing: border-box;
+  background-color: #f8f8f8;
+}
+
+div#contacto .button-group {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 15px;
+}
+
+div#contacto input[type="submit"] {
+  width: 15%;
+  padding: 10px;
+  border: none;
+  border-radius: 10px;
+  font-size: 20px;
+  cursor: pointer;
+  color: balck;
+}
+
+div#contacto input[type="submit"] {
+  background-color: rgb(190, 190, 190);
+}
+
+div#contacto input[type="submit"]:hover {
+  background-color: rgb(150, 150, 150);
+}
+
+/*aviso legal*/
+div#avisoLegal {
+  padding: 50px;
+  font-size: 20px;
+  text-align: justify;
+  background-color: #ffffff;
+  padding-left: 33%;
+  padding-right: 33%;
+  color: #363636;
+}
+
+div#avisoLegal strong {
+  color: black;
+}
+
+div#avisoLegal h1 {
+  text-align: center;
 }
 
 /*pie*/
