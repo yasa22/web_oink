@@ -29,7 +29,7 @@ $contenido = <<<EOS
                                 $contenido .= "<div class='$class' style='position: relative;'>";
                                     $contenido .= "<div class='imgProducto'>";
                                         $contenido .= "<a class='subr' href='detalles_producto.php?id=" . $producto->getID() . "'>"; // Enlace a la página de detalles del producto
-                                        $contenido .= "<img src='" . RUTA_APP . $producto->getImagen() . "' alt='Imagen del producto' id='imgCompras'>";
+                                        $contenido .= "<img src='" . RUTA_IMG .'/db/' . $producto->getImagen() . "' alt='Imagen del producto' id='imgCompras'>";
                                         $contenido .= "</a>";
                                     $contenido .= "</div>";
                                     $contenido .= "<div class ='detalles'>";

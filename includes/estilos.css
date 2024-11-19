@@ -254,3 +254,21 @@ div.pie {
   box-sizing: border-box; /* Asegura que el padding no cause desbordamiento */
   overflow: hidden; /* Evita que el contenido se desborde */
 }
+
+/*cosas db*/
+
+div#divproductos{
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-gap: 10px;
+  justify-items: center;
+}
+
+div.producto {
+  border: 2px solid black;
+}
+
+
+img#imgCompras {
+  width: 300px;
+}
