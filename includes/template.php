@@ -14,7 +14,9 @@ session_start();
 </head>
 <body>
     <header>
-        <?php require_once 'cabecera.php' ?>
+        <?php 
+            require_once isset($cabecera2) ? 'cabecera2.php' : 'cabecera.php';
+        ?>
     </header>
 
     <main>

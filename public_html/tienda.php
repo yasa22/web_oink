@@ -25,20 +25,24 @@ $contenido = <<<EOS
                         $contenido .= "<div id='divproductos'>";
                         foreach ($productos as $producto) {
                             
-                                $class = "producto";
-                                $contenido .= "<div class='$class' style='position: relative;'>";
+                            $class = "producto";
+                            $contenido .= "<div class='$class' style='position: relative;'>";
+                                // Aquí movemos el <a> para envolver todo el producto
+                                $contenido .= "<a class='subr' href='detalles_producto.php?id=" . $producto->getID() . "'>"; // Enlace a la página de detalles del producto
+                                
+                                    // Imagen del producto
                                     $contenido .= "<div class='imgProducto'>";
-                                        $contenido .= "<a class='subr' href='detalles_producto.php?id=" . $producto->getID() . "'>"; // Enlace a la página de detalles del producto
-                                        $contenido .= "<img src='" . RUTA_IMG .'/db/' . $producto->getImagen() . "' alt='Imagen del producto' id='imgCompras'>";
-                                        $contenido .= "</a>";
+                                        $contenido .= "<img src='" . RUTA_IMG . '/db/' . $producto->getImagen() . "' alt='Imagen del producto' id='imgCompras'>";
                                     $contenido .= "</div>";
-                                    $contenido .= "<div class ='detalles'>";
-                                        $contenido .= "<a class='subr' href='detalles_producto.php?id=" . $producto->getID() . "'>";
+                                    
+                                    // Detalles del producto (nombre y precio)
+                                    $contenido .= "<div class='detalles'>";
                                         $contenido .= "<h3>" . $producto->getNombre() ."</h3>";
-                                        $contenido .= "</a>";//Solo la imagen y el nombre son clickeables
                                         $contenido .= "<p>" . $producto->getPrecio() . " €</p>";
                                     $contenido .= "</div>";
-                                $contenido .= "</div>"; //fin div producto
+
+                                $contenido .= "</a>"; // Cierra el enlace que envuelve todo el producto
+                            $contenido .= "</div>"; //fin div producto
                             
                         }
                         $contenido .= "</div>"; //fin div productos

@@ -6,6 +6,7 @@ $ruta2 = RUTA_IMG . '/db/Azul solo.jpg';
 $ruta3 = RUTA_IMG . '/db/BN solo.jpg';
 $ruta4 = RUTA_IMG . '/db/Rosa solo.jpg';
 $titulo = 'Tienda Oink!';
+$cabecera2 = true;
 $contenido = <<<EOS
         <article>
             <section>

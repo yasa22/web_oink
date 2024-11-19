@@ -16,19 +16,48 @@ a:hover,
 a:active {
   color: black;
 }
-
 /* header */
 div.cabecera {
-  background-color: white;
+  position: relative; /* Necesario para que el pseudo-elemento se posicione bien */
   font-weight: bold;
   text-align: center;
-  padding: 10px;
+  padding: 20px; /* Aumenta el padding para dar más espacio alrededor del contenido */
   display: flex;
   justify-content: space-between;
   align-items: center;
+  overflow: hidden; /* Asegura que no se desborde la imagen de fondo */
+  height: 350px; /* Ajusta la altura de la cabecera, puedes cambiar este valor */
+  background-color: rgba(0, 0, 0, 0.2); /* Agrega un fondo oscuro con opacidad */
 }
 
-div.cabecera nav {
+div.cabecera2 {
+  position: relative; /* Necesario para que el pseudo-elemento se posicione bien */
+  font-weight: bold;
+  text-align: center;
+  padding: 20px; /* Aumenta el padding para dar más espacio alrededor del contenido */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  overflow: hidden; /* Asegura que no se desborde la imagen de fondo */
+  height: 350px; /* Ajusta la altura de la cabecera, puedes cambiar este valor */
+}
+
+/* Imagen de fondo con difuminado y opacidad */
+div.cabecera::before {
+  content: ''; /* Crea un pseudo-elemento vacío */
+  position: absolute; /* Colócalo sobre el fondo */
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url('img/pinos.jpg');
+  background-size: cover;
+  background-position: center;
+  filter: blur(1px); /* Aplica el difuminado solo a la imagen */
+  z-index: -1; /* Asegura que el pseudo-elemento esté detrás del contenido */
+}
+
+div.cabecera nav, div.cabecera2 nav {
   width: 65%;
 }
 
@@ -40,7 +69,9 @@ nav.indice button {
   background: linear-gradient(to right, #9beeee 0%, #e996e9 100%);
   border-radius: 10px;
   border: 0px;
+  font-weight: 500; /* Adds slight boldness */
 }
+
 
 div#logoOink {
   width: 30%;
@@ -48,7 +79,7 @@ div#logoOink {
 }
 
 div#logoOink img {
-  width: 50%;
+  width: 80%;
 }
 
 div#redes {
@@ -56,7 +87,10 @@ div#redes {
 }
 
 div#redes img {
-  width: 35%;
+  width: 40%;
+  background-color: #e2e2e2;
+  padding: 5px;
+  border-radius: 5px;
 }
 
 /* main */
@@ -242,8 +276,8 @@ div#tienda {
   font-size: 20px;
   text-align: center;
   background-color: #ffffff;
-  padding-left: 33%;
-  padding-right: 33%;
+  padding-left: 20%;
+  padding-right: 20%;
   color: #000000;
 }
 
@@ -276,21 +310,31 @@ div.pie {
   box-sizing: border-box; /* Asegura que el padding no cause desbordamiento */
   overflow: hidden; /* Evita que el contenido se desborde */
 }
-
-
-/*cosas db*/
-div#divproductos{
+/* Cosas db */
+div#divproductos {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  grid-gap: 10px;
+  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+  grid-gap: 20px;
   justify-items: center;
 }
 
 div.producto {
-  border: 2px solid black;
+  padding: 5%;
+  border: 2px rgba(0, 0, 0, 0.3);
+  box-shadow: rgba(115, 115, 115, 0.5) 5px 5px 5px 3px;
 }
-
 
 img#imgCompras {
   width: 300px;
+}
+
+/* Estilo de los enlaces (a) */
+a.subr {
+  text-decoration: none;  /* Elimina el subrayado */
+  color: black;           /* Define el color negro para el texto del enlace */
+}
+
+a.subr:hover, a.subr:focus {
+  color: black;           /* Asegura que el color negro se mantenga al hacer hover o focus */
+  text-decoration: none;  /* Asegura que no se subraye en el hover o focus */
 }
