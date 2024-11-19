@@ -5,7 +5,11 @@ $titulo = 'Galería OINK!';
 $contenido = <<<EOS
         <article>
             <section>
-                <h1>GALERIA</h1>       
+                <div id='galeria'>
+                    <h1>GALERIA</h1>
+
+                    <h2>Dibujitos de Iago Milet</h2>
+                </div>     
             </section>
         </article>
     EOS;

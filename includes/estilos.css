@@ -236,6 +236,28 @@ div#avisoLegal h1 {
   text-align: center;
 }
 
+/*tienda*/
+div#tienda {
+  padding: 50px;
+  font-size: 20px;
+  text-align: center;
+  background-color: #ffffff;
+  padding-left: 33%;
+  padding-right: 33%;
+  color: #000000;
+}
+
+div#galeria {
+  padding: 50px;
+  font-size: 20px;
+  text-align: center;
+  background-color: #ffffff;
+  padding-left: 33%;
+  padding-right: 33%;
+  color: #000000;
+}
+
+
 /*pie*/
 div.pie {
   line-height: 30px;
@@ -255,8 +277,8 @@ div.pie {
   overflow: hidden; /* Evita que el contenido se desborde */
 }
 
-/*cosas db*/
 
+/*cosas db*/
 div#divproductos{
   display: grid;
   grid-template-columns: repeat(4, 1fr);

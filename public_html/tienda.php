@@ -17,7 +17,7 @@ $titulo = 'Tienda OINK!';
 $contenido = <<<EOS
         <article>
             <section>
-                <div id='tineda'>
+                <div id='tienda'>
                     <h1>TIENDA</h1>
         EOS;
                     if (!empty($productos)) {
@@ -45,7 +45,8 @@ $contenido = <<<EOS
                         
                         
                     } else {
-                        $contenido .= "<p>No se encontraron productos</p>";
+                        $contenido .= "<p>No se encontraron productos.</p>";
+                        $contenido .= "<p>Por favor, elige otros criterios de búsqueda.</p>";
                     }
                     $contenido .= "</div>";
                 $contenido .= "</section>";
