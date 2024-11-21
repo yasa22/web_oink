@@ -26,7 +26,7 @@ div.cabecera {
   justify-content: space-between;
   align-items: center;
   overflow: hidden; /* Asegura que no se desborde la imagen de fondo */
-  height: 350px; /* Ajusta la altura de la cabecera, puedes cambiar este valor */
+  height: 320px; /* Ajusta la altura de la cabecera, puedes cambiar este valor */
   background-color: rgba(0, 0, 0, 0.2); /* Agrega un fondo oscuro con opacidad */
 }
 
@@ -39,7 +39,7 @@ div.cabecera2 {
   justify-content: space-between;
   align-items: center;
   overflow: hidden; /* Asegura que no se desborde la imagen de fondo */
-  height: 350px; /* Ajusta la altura de la cabecera, puedes cambiar este valor */
+  height: 320px; /* Ajusta la altura de la cabecera, puedes cambiar este valor */
 }
 
 /* Imagen de fondo con difuminado y opacidad */
@@ -321,7 +321,7 @@ div#divproductos {
 div.producto {
   padding: 5%;
   border: 2px rgba(0, 0, 0, 0.3);
-  box-shadow: rgba(115, 115, 115, 0.5) 5px 5px 5px 3px;
+  box-shadow: rgba(115, 115, 115, 0.5) 5px 5px 5px 4px;
 }
 
 img#imgCompras {
@@ -337,4 +337,12 @@ a.subr {
 a.subr:hover, a.subr:focus {
   color: black;           /* Asegura que el color negro se mantenga al hacer hover o focus */
   text-decoration: none;  /* Asegura que no se subraye en el hover o focus */
+}
+
+div#detalles_producto {
+  width: 80%;
+}
+
+div#detalles_producto img {
+  width: 200px;
 }
