@@ -13,12 +13,11 @@ $descripcion = $producto->getDescripcion();
 $contenido = <<<EOS
             <article>
                 <section>
-                    <h2>Detalles del producto</h2>
                     <div id='detalles_producto'>
+                    <h1>$nombre</h1>
             EOS;
             $contenido .= "<img src='$ruta' alt='Imagen del producto'>";
                          $contenido .= "<div>";
-                             $contenido .= "<h3>$nombre</h3>";
                              $contenido .= "<p>$descripcion</p>";
                              $contenido .= "<h4>Valoraciones</h4>";
                             

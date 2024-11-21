@@ -339,10 +339,17 @@ a.subr:hover, a.subr:focus {
   text-decoration: none;  /* Asegura que no se subraye en el hover o focus */
 }
 
+/*detalles*/
 div#detalles_producto {
-  width: 80%;
+  padding: 50px;
+  font-size: 20px;
+  text-align: center;
+  background-color: #ffffff;
+  padding-left: 20%;
+  padding-right: 20%;
+  color: #000000;
 }
 
 div#detalles_producto img {
-  width: 200px;
+  width: 300px;
 }
