@@ -10,38 +10,45 @@ $titulo  = "Detalles del producto";
 $ruta = RUTA_IMG . '/db/' . $producto->getImagen();
 $nombre = $producto->getNombre();
 $descripcion = $producto->getDescripcion();
+
 $contenido = <<<EOS
-            <article>
-                <section>
-                    <div id='detalles_producto'>
-                    <h1>$nombre</h1>
-            EOS;
-            $contenido .= "<img src='$ruta' alt='Imagen del producto'>";
-                         $contenido .= "<div>";
-                             $contenido .= "<p>$descripcion</p>";
-                             $contenido .= "<h4>Valoraciones</h4>";
-                            
-                            $id_producto = $producto->getID();
-                            /*$valoraciones = valoracion::getValoracion($id_producto);
-                            foreach($valoraciones as $valoracion) {
-                                
-                                if($valoracion != null) {
-                                    
-                                    $usuario = Usuario::buscaPorId($valoracion["Idusuario"]);
-                            
-                            
-                                 $contenido .= "<div class='valoracion'>";
-                                     $contenido .= "<p>Usuario: <?php echo $usuario->getNombre(); ?></p>";
-                                     $contenido .= '<p>Valoración: <?php echo $valoracion["Valoracion"]; ?></p>';
-                                     $contenido .= '<p>Comentario: <?php echo $valoracion["Comentario"]; ?></p>';
-                                 $contenido .= "</div>";
-                                }
-                            }
-                                */
-                         $contenido .= "</div>";
-                     $contenido .= "</div>";
-                 $contenido .= "</section>";
-            $contenido .= " </article>";
-            
+<article>
+    <section>
+        <div id='detalles_producto'>
+            <h1>$nombre</h1>
+            <div id='producto'>
+                <div id="imagen_producto">
+                    <img src='$ruta' alt='Imagen del producto'>
+                </div>
+                <div id="info_producto">
+                    <p>$descripcion</p>
+                </div>
+            </div>
+            <div id='valoraciones_producto'>
+                <h4>Valoraciones</h4>
+EOS;
+
+// Simulación de obtener valoraciones
+$id_producto = $producto->getID();
+// $valoraciones = valoracion::getValoracion($id_producto);
+/*
+foreach ($valoraciones as $valoracion) {
+    if ($valoracion != null) {
+        $usuario = Usuario::buscaPorId($valoracion["Idusuario"]);
+        $usuarioNombre = $usuario->getNombre();
+        $contenido .= "<div class='valoracion'>";
+        $contenido .= "<p><strong>Usuario:</strong> $usuarioNombre</p>";
+        $contenido .= "<p><strong>Valoración:</strong> {$valoracion["Valoracion"]}</p>";
+        $contenido .= "<p><strong>Comentario:</strong> {$valoracion["Comentario"]}</p>";
+        $contenido .= "</div>";
+    }
+}
+*/
+$contenido .= <<<EOS
+            </div>
+        </div>
+    </section>
+</article>
+EOS;
 
 require_once RAIZ_APP . '/includes/template.php';
