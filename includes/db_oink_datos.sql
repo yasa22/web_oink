@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 19-11-2024 a las 10:33:12
+-- Tiempo de generación: 22-11-2024 a las 14:51:53
 -- Versión del servidor: 10.4.32-MariaDB
 -- Versión de PHP: 8.2.12
 
@@ -22,39 +22,15 @@ SET time_zone = "+00:00";
 -- Base de datos: `db_oink`
 --
 
--- --------------------------------------------------------
-
 --
--- Estructura de tabla para la tabla `productos`
+-- Volcado de datos para la tabla `productos`
 --
 
-CREATE TABLE `productos` (
-  `ID` int(10) UNSIGNED NOT NULL,
-  `Nombre` varchar(10) NOT NULL,
-  `Descripcion` varchar(10) NOT NULL,
-  `Precio` float NOT NULL,
-  `Imagen` varchar(10) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
-
---
--- Índices para tablas volcadas
---
-
---
--- Indices de la tabla `productos`
---
-ALTER TABLE `productos`
-  ADD PRIMARY KEY (`ID`);
-
---
--- AUTO_INCREMENT de las tablas volcadas
---
-
---
--- AUTO_INCREMENT de la tabla `productos`
---
-ALTER TABLE `productos`
-  MODIFY `ID` int(10) UNSIGNED NOT NULL AUTO_INCREMENT;
+INSERT INTO `productos` (`ID_Producto`, `Nombre`, `Descripcion`, `Precio`, `Imagen`) VALUES
+(1, 'prueba1', 'Esta es la descripcion del producto de prueba 1. sdfs dfsdf sdf sdf sdf sdf sdf sdf sdf sdf ñklsnfñkñ kjñkjñj ñj  ñj ñj ñkj ñ k ñj ', 123, 'Web Endless BN.jpg'),
+(2, 'prueba2', 'prueba2', 321, 'Web Endless Color.jpg'),
+(3, 'prueba3', 'prueba3', 333.33, 'Web PorkWax Lima.jpg'),
+(4, 'prueba4', 'prueba4', 4444.4, 'Web PorkWax Azul.jpg');
 SET FOREIGN_KEY_CHECKS=1;
 COMMIT;
 
