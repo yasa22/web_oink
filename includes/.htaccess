@@ -1,0 +1,11 @@
+# Bloquear el acceso directo a cualquier archivo PHP en la carpeta includes
+<FilesMatch "\.php$">
+    Require all denied
+</FilesMatch>
+
+# Permitir acceso cuando es llamado desde otros scripts PHP (mediante require o include)
+<IfModule mod_rewrite.c>
+    RewriteEngine On
+    RewriteCond %{REQUEST_URI} !^/web_oink/includes/
+    RewriteRule ^ - [L]
+</IfModule>

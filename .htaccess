@@ -1,0 +1,18 @@
+# HTID:23123329: DO NOT REMOVE OR MODIFY THIS LINE AND THE LINES BELOW
+php_value display_errors 1
+# DO NOT REMOVE OR MODIFY THIS LINE AND THE LINES ABOVE HTID:23123329:
+
+RewriteEngine On
+
+# Bloquear acceso directo a los archivos PHP en la carpeta includes
+RewriteRule ^includes/.*\.php$ - [F,L]
+
+# Permitir acceso a index.php y contenido dentro de public_html
+RewriteCond %{REQUEST_URI} !^/web_oink/index\.php$
+RewriteCond %{REQUEST_URI} !^/web_oink/public_html/
+RewriteRule ^ - [F,L]
+
+# Asegurarse de que no se pueda acceder a este archivo .htaccess
+<Files ".htaccess">
+    Require all denied
+</Files>
