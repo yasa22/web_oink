@@ -341,15 +341,43 @@ a.subr:hover, a.subr:focus {
 
 /*detalles*/
 div#detalles_producto {
-  padding: 50px;
-  font-size: 20px;
-  text-align: center;
+  margin: 0 auto; /* Centra el div horizontalmente */
+  text-align: center; /* Centra el contenido textual */
   background-color: #ffffff;
-  padding-left: 20%;
-  padding-right: 20%;
   color: #000000;
+  padding: 20px;
+  width: 80%;
 }
 
-div#detalles_producto img {
-  width: 300px;
+div#producto {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+
+/* Imagen a la izquierda */
+div#imagen_producto img {
+  max-width: 500px;
+  height: auto;
+  margin-right: 20px;
+}
+
+/* Texto a la derecha */
+div#info_producto {
+  padding: 40px;
+  text-align: justify;
+  flex: 1;
+}
+
+/* Valoraciones debajo */
+div#valoraciones_producto {
+  margin-top: 20px;
+  text-align: justify;
+}
+
+div.valoracion {
+  margin-top: 10px;
+  padding: 10px;
 }
