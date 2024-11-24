@@ -17,7 +17,6 @@
         <a href="https://www.instagram.com/oinkporkwear/" target="_blank">
             <img src="<?= RUTA_IMG . '/instaLogo.png' ?>" alt="Instagram">
         </a>
-        <p></p>
         <a href="<?= RUTA_PAGINAS . '/login.php' ?>">
             <img src="<?= RUTA_IMG . '/loginLogo.png' ?>" alt="Login">
         </a>

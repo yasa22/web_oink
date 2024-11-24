@@ -38,7 +38,7 @@ $contenido = <<<EOS
                                     // Detalles del producto (nombre y precio)
                                     $contenido .= "<div class='detalles'>";
                                         $contenido .= "<h3>" . $producto->getNombre() ."</h3>";
-                                        $contenido .= "<p>" . $producto->getPrecio() . " €</p>";
+                                        //$contenido .= "<p>" . $producto->getPrecio() . " €</p>";
                                     $contenido .= "</div>";
 
                                 $contenido .= "</a>"; // Cierra el enlace que envuelve todo el producto

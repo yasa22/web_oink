@@ -62,7 +62,8 @@ div.cabecera nav, div.cabecera2 nav {
 }
 
 nav.indice button {
-  min-width: 12%;
+  width: 100%;
+  max-width: 120px;
   font-size: 20px;
   margin: 1%;
   padding: 20px;
@@ -83,14 +84,14 @@ div#logoOink img {
 }
 
 div#redes {
-  width: 5%;
+  width: 120px;
 }
 
 div#redes img {
-  width: 40%;
+  width: 60px;
   background-color: #e2e2e2;
   padding: 5px;
-  border-radius: 5px;
+  border-radius: 10px;
 }
 
 /* main */
@@ -276,8 +277,8 @@ div#tienda {
   font-size: 20px;
   text-align: center;
   background-color: #ffffff;
-  padding-left: 20%;
-  padding-right: 20%;
+  padding-left: 10%;
+  padding-right: 10%;
   color: #000000;
 }
 
@@ -310,10 +311,11 @@ div.pie {
   box-sizing: border-box; /* Asegura que el padding no cause desbordamiento */
   overflow: hidden; /* Evita que el contenido se desborde */
 }
+
 /* Cosas db */
 div#divproductos {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(420px, 1fr));
   grid-gap: 20px;
   justify-items: center;
 }
@@ -325,7 +327,7 @@ div.producto {
 }
 
 img#imgCompras {
-  width: 300px;
+  width: 400px;
 }
 
 /* Estilo de los enlaces (a) */
@@ -339,36 +341,39 @@ a.subr:hover, a.subr:focus {
   text-decoration: none;  /* Asegura que no se subraye en el hover o focus */
 }
 
-/*detalles*/
+/* Detalles */
 div#detalles_producto {
   margin: 0 auto; /* Centra el div horizontalmente */
   text-align: center; /* Centra el contenido textual */
   background-color: #ffffff;
   color: #000000;
   padding: 20px;
+  padding-top: 100px;
   width: 60%;
 }
 
 div#producto {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: space-between;
+  display: grid; /* Diseño de cuadrícula */
+  grid-template-columns: 1fr 1fr; /* Dos columnas iguales en pantallas grandes */
+  gap: 20px; /* Espaciado entre columnas */
   margin-bottom: 20px;
 }
 
 /* Imagen a la izquierda */
 div#imagen_producto img {
-  max-width: 500px;
+  max-width: 100%; /* Asegura que la imagen no desborde */
   height: auto;
-  margin-right: 20px;
+  display: block;
+  margin: 0 auto; /* Centra la imagen en su columna */
 }
 
 /* Texto a la derecha */
 div#info_producto {
-  padding: 40px;
+  padding: 20px;
   text-align: justify;
-  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center; /* Centra el texto verticalmente */
 }
 
 /* Valoraciones debajo */
@@ -380,4 +385,20 @@ div#valoraciones_producto {
 div.valoracion {
   margin-top: 10px;
   padding: 10px;
+}
+
+/* Media Query para pantallas pequeñas */
+@media (max-width: 800px) {
+  div#producto {
+    grid-template-columns: 1fr; /* Cambia a una columna */
+  }
+
+  div#imagen_producto,
+  div#info_producto {
+    text-align: center; /* Centra el contenido en pantallas pequeñas */
+  }
+
+  div#info_producto {
+    padding: 10px; /* Reduce el padding para dispositivos más pequeños */
+  }
 }

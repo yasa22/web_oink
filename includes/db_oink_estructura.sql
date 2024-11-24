@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 22-11-2024 a las 14:51:33
+-- Tiempo de generación: 24-11-2024 a las 19:12:39
 -- Versión del servidor: 10.4.32-MariaDB
 -- Versión de PHP: 8.2.12
 
@@ -25,6 +25,19 @@ SET time_zone = "+00:00";
 -- --------------------------------------------------------
 
 --
+-- Estructura de tabla para la tabla `img_producto`
+--
+
+CREATE TABLE `img_producto` (
+  `ID` int(10) UNSIGNED NOT NULL,
+  `img1` varchar(30) NOT NULL,
+  `img2` varchar(30) NOT NULL,
+  `img3` varchar(30) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+-- --------------------------------------------------------
+
+--
 -- Estructura de tabla para la tabla `productos`
 --
 
@@ -39,6 +52,12 @@ CREATE TABLE `productos` (
 --
 -- Índices para tablas volcadas
 --
+
+--
+-- Indices de la tabla `img_producto`
+--
+ALTER TABLE `img_producto`
+  ADD PRIMARY KEY (`ID`);
 
 --
 -- Indices de la tabla `productos`

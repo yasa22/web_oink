@@ -1,7 +1,7 @@
 <div class="cabecera">
     <div id='logoOink'>
         <a href="<?= RUTA_APP . '/index.php' ?>">
-            <img src="<?= RUTA_IMG . '/logo rosa borde1.png' ?>" alt="Logo">
+            <img src="<?= RUTA_IMG . '/logo rosa borde.png' ?>" alt="Logo">
         </a>
     </div>
     <nav class='indice'>
@@ -17,7 +17,6 @@
         <a href="https://www.instagram.com/oinkporkwear/" target="_blank">
             <img src="<?= RUTA_IMG . '/instaLogo.png' ?>" alt="Instagram">
         </a>
-        <p></p>
         <a href="<?= RUTA_PAGINAS . '/login.php' ?>">
             <img src="<?= RUTA_IMG . '/loginLogo.png' ?>" alt="Login">
         </a>
