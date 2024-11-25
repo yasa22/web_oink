@@ -1,6 +1,7 @@
 /* General */
 * {
   font-family: "Calibri";
+  font-size: 20px;
   box-sizing: border-box; /* Asegura que el padding y border no afecten el tamaño total del elemento */
 }
 h1 {
@@ -136,7 +137,7 @@ div#principal p {
   top: 360px;
 }
 
-div#pincipal2 {
+div#principal2 {
   font-size: 20px;
   padding: 50px;
   display: flex;
@@ -146,23 +147,29 @@ div#pincipal2 {
   text-align: center;       
 }
 
-div#pincipal2 > h1 {
+div#principal2 > h1 {
   width: 100%;
   font-size: 40px;
   font-weight: bold;
 }
-div#pincipal2 > p,
-div#pincipal2 > div {
+div#principal2 > p,
+div#principal2 > div {
   width: 60%; 
+}
+div#principal2 a{
+  font-weight: bold;
+  color: black;
 }
 div#cuadricula {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   grid-gap: 10px;
+  padding: 5%;
   justify-items: center;
 }
 
 div#cuadricula img {
+  padding: 10px;
   width: 100%;
   max-width: 300px;
   height: auto;

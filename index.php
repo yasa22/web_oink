@@ -5,6 +5,9 @@ $ruta1 = RUTA_IMG . '/db/Lima solo.jpg';
 $ruta2 = RUTA_IMG . '/db/Azul solo.jpg';
 $ruta3 = RUTA_IMG . '/db/BN solo.jpg';
 $ruta4 = RUTA_IMG . '/db/Rosa solo.jpg';
+
+$tienda = RUTA_PAGINAS . '/tienda.php';
+
 $titulo = 'Tienda Oink!';
 $cabecera2 = true;
 $contenido = <<<EOS
@@ -15,9 +18,9 @@ $contenido = <<<EOS
                     <h1>PORK WEAR</h1>
                     <p>En el pico de la ola desde 1982</p>
                 </div>
-                <div id='pincipal2'>
+                <div id='principal2'>
                     <h1>ARTÍCULOS DESTACADOS</h1>
-                    <p>Visita la tienda para ver todas nuestras prendas!</p>
+                    <p>Visita la <a href="$tienda">tienda</a> para ver todas nuestras prendas!</p>
                     <div id='cuadricula'>
                         <img src="$ruta1" alt="Artículo 1" />
                         <img src="$ruta2" alt="Artículo 2" />

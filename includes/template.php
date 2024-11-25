@@ -15,7 +15,7 @@ session_start();
 <body>
     <header>
         <?php 
-            require_once isset($cabecera2) ? 'cabecera2.php' : 'cabecera.php';
+            require_once isset($cabecera2) ? 'comun/cabecera2.php' : 'comun/cabecera.php';
         ?>
     </header>
 
@@ -24,7 +24,7 @@ session_start();
     </main>
 
     <footer>
-        <?php require_once 'pie.php' ?>
+        <?php require_once 'comun/pie.php' ?>
     </footer>
 </body>
 </html>
