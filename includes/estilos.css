@@ -388,7 +388,7 @@ div.valoracion {
 }
 
 /* Media Query para pantallas pequeñas */
-@media (max-width: 800px) {
+@media (max-width: 900px) {
   div#producto {
     grid-template-columns: 1fr; /* Cambia a una columna */
   }
@@ -401,4 +401,49 @@ div.valoracion {
   div#info_producto {
     padding: 10px; /* Reduce el padding para dispositivos más pequeños */
   }
+}
+
+
+/*carrusel*/
+.carousel-container {
+  position: relative;
+  width: 100%;
+  max-width: 500px;
+  margin: 0 auto;
+  overflow: hidden;
+}
+
+.carousel-images {
+  display: flex;
+  transition: transform 0.5s ease-in-out;
+  width: 100%;
+}
+
+.carousel-image {
+  min-width: 100%;
+  height: auto;
+  display: block;
+}
+
+.carousel-button {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: rgba(0, 0, 0, 0.5);
+  color: white;
+  border: none;
+  font-size: 2rem;
+  padding: 10px;
+  padding-top: 6px;
+  cursor: pointer;
+  z-index: 100;
+  border-radius: 10px;
+}
+
+.carousel-button.prev {
+  left: 10px;
+}
+
+.carousel-button.next {
+  right: 10px;
 }
