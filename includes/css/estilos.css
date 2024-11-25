@@ -1,0 +1,456 @@
+/* General */
+* {
+  font-family: "Calibri";
+  font-size: 20px;
+  box-sizing: border-box; /* Asegura que el padding y border no afecten el tamaño total del elemento */
+}
+h1 {
+  font-size: 2.5em;
+}
+h2 {
+  padding: 3%;
+}
+
+a:link,
+a:visited,
+a:hover,
+a:active {
+  color: black;
+}
+/* header */
+div.cabecera {
+  position: relative; /* Necesario para que el pseudo-elemento se posicione bien */
+  font-weight: bold;
+  text-align: center;
+  padding: 20px; /* Aumenta el padding para dar más espacio alrededor del contenido */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  overflow: hidden; /* Asegura que no se desborde la imagen de fondo */
+  height: 320px; /* Ajusta la altura de la cabecera, puedes cambiar este valor */
+  background-color: rgba(0, 0, 0, 0.2); /* Agrega un fondo oscuro con opacidad */
+}
+
+div.cabecera2 {
+  position: relative; /* Necesario para que el pseudo-elemento se posicione bien */
+  font-weight: bold;
+  text-align: center;
+  padding: 20px; /* Aumenta el padding para dar más espacio alrededor del contenido */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  overflow: hidden; /* Asegura que no se desborde la imagen de fondo */
+  height: 320px; /* Ajusta la altura de la cabecera, puedes cambiar este valor */
+}
+
+/* Imagen de fondo con difuminado y opacidad */
+div.cabecera::before {
+  content: ''; /* Crea un pseudo-elemento vacío */
+  position: absolute; /* Colócalo sobre el fondo */
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url('img/pinos.jpg');
+  background-size: cover;
+  background-position: center;
+  filter: blur(1px); /* Aplica el difuminado solo a la imagen */
+  z-index: -1; /* Asegura que el pseudo-elemento esté detrás del contenido */
+}
+
+div.cabecera nav, div.cabecera2 nav {
+  width: 65%;
+}
+
+nav.indice button {
+  width: 100%;
+  max-width: 120px;
+  font-size: 20px;
+  margin: 1%;
+  padding: 20px;
+  background: linear-gradient(to right, #9beeee 0%, #e996e9 100%);
+  border-radius: 10px;
+  border: 0px;
+  font-weight: 500; /* Adds slight boldness */
+}
+
+
+div#logoOink {
+  width: 30%;
+  padding: 3%;
+}
+
+div#logoOink img {
+  width: 80%;
+}
+
+div#redes {
+  width: 120px;
+}
+
+div#redes img {
+  width: 60px;
+  background-color: #e2e2e2;
+  padding: 5px;
+  border-radius: 10px;
+}
+
+/* main */
+body {
+  margin: 0;
+  padding: 0;
+}
+
+/*principal*/
+div#principal {
+  position: relative; 
+  color: white;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: rgb(50, 50, 50);
+}
+
+div#principal img {
+  opacity: 85%;
+  width: 100%;
+  padding: 0px;
+  display: block;
+}
+
+div#principal h1, div#principal p {
+  position: absolute;
+  z-index: 10;
+  color: white;
+}
+
+div#principal h1 {
+  font-size: 5em;
+  margin: 0;
+  top: 80px;
+}
+
+div#principal p {
+  font-size: 1.5em;
+  margin: 0;
+  top: 360px;
+}
+
+div#principal2 {
+  font-size: 20px;
+  padding: 50px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;  
+  align-items: center;      
+  text-align: center;       
+}
+
+div#principal2 > h1 {
+  width: 100%;
+  font-size: 40px;
+  font-weight: bold;
+}
+div#principal2 > p,
+div#principal2 > div {
+  width: 60%; 
+}
+div#principal2 a{
+  font-weight: bold;
+  color: black;
+}
+div#cuadricula {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-gap: 10px;
+  padding: 5%;
+  justify-items: center;
+}
+
+div#cuadricula img {
+  padding: 10px;
+  width: 100%;
+  max-width: 300px;
+  height: auto;
+}
+
+/*nosotros*/
+div#nosotros {
+  padding-top: 50px;
+  font-size: 20px;
+  padding-left: 15%;
+  padding-right: 15%;
+  justify-items: center;
+}
+
+div#nosotros img {
+  width: 40%;
+}
+
+div.nos {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  text-align: justify;
+  gap: 50px;
+}
+
+div.nos p {
+  padding: 40px;
+}
+
+/*contacto*/
+div#contacto {
+  padding: 50px;
+  font-size: 20px;
+  justify-items: center;
+  text-align: justify;
+  background-color: #ffffff;
+  padding-left: 33%;
+  padding-right: 33%;
+  color: #000000;
+}
+
+
+div#contacto input[type="text"] {
+  width: 49%;
+  padding: 10px;
+  margin: 10px 0;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 20px;
+  box-sizing: border-box;
+  background-color: #f8f8f8;
+}
+div#contacto input[type="email"],
+div#contacto textarea {
+  width: 100%;
+  padding: 10px;
+  margin: 10px 0;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 20px;
+  box-sizing: border-box;
+  background-color: #f8f8f8;
+}
+
+div#contacto .button-group {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 15px;
+}
+
+div#contacto input[type="submit"] {
+  width: 15%;
+  padding: 10px;
+  border: none;
+  border-radius: 10px;
+  font-size: 20px;
+  cursor: pointer;
+  color: balck;
+}
+
+div#contacto input[type="submit"] {
+  background-color: rgb(190, 190, 190);
+}
+
+div#contacto input[type="submit"]:hover {
+  background-color: rgb(150, 150, 150);
+}
+
+/*aviso legal*/
+div#avisoLegal {
+  padding: 50px;
+  font-size: 20px;
+  text-align: justify;
+  background-color: #ffffff;
+  padding-left: 33%;
+  padding-right: 33%;
+  color: #363636;
+}
+
+div#avisoLegal strong {
+  color: black;
+}
+
+div#avisoLegal h1 {
+  text-align: center;
+}
+
+/*tienda*/
+div#tienda {
+  padding: 50px;
+  font-size: 20px;
+  text-align: center;
+  background-color: #ffffff;
+  padding-left: 10%;
+  padding-right: 10%;
+  color: #000000;
+}
+
+div#galeria {
+  padding: 50px;
+  font-size: 20px;
+  text-align: center;
+  background-color: #ffffff;
+  padding-left: 33%;
+  padding-right: 33%;
+  color: #000000;
+}
+
+
+/*pie*/
+div.pie {
+  line-height: 30px;
+  padding: 40px;
+  padding-left: 0px;
+  width: 100%;
+  max-width: 100%; /* Asegura que no exceda el ancho de la pantalla */
+  background-color: rgb(190, 190, 190);
+  position: relative;
+  bottom: 0;
+  border-top: 3px solid black;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  justify-content: space-evenly;
+  box-sizing: border-box; /* Asegura que el padding no cause desbordamiento */
+  overflow: hidden; /* Evita que el contenido se desborde */
+}
+
+/* Cosas db */
+div#divproductos {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(420px, 1fr));
+  grid-gap: 20px;
+  justify-items: center;
+}
+
+div.producto {
+  padding: 5%;
+  border: 2px rgba(0, 0, 0, 0.3);
+  box-shadow: rgba(115, 115, 115, 0.5) 5px 5px 5px 4px;
+}
+
+img#imgCompras {
+  width: 400px;
+}
+
+/* Estilo de los enlaces (a) */
+a.subr {
+  text-decoration: none;  /* Elimina el subrayado */
+  color: black;           /* Define el color negro para el texto del enlace */
+}
+
+a.subr:hover, a.subr:focus {
+  color: black;           /* Asegura que el color negro se mantenga al hacer hover o focus */
+  text-decoration: none;  /* Asegura que no se subraye en el hover o focus */
+}
+
+/* Detalles */
+div#detalles_producto {
+  margin: 0 auto; /* Centra el div horizontalmente */
+  text-align: center; /* Centra el contenido textual */
+  background-color: #ffffff;
+  color: #000000;
+  padding: 20px;
+  padding-top: 100px;
+  width: 60%;
+}
+
+div#producto {
+  display: grid; /* Diseño de cuadrícula */
+  grid-template-columns: 1fr 1fr; /* Dos columnas iguales en pantallas grandes */
+  gap: 20px; /* Espaciado entre columnas */
+  margin-bottom: 20px;
+}
+
+/* Imagen a la izquierda */
+div#imagen_producto img {
+  max-width: 100%; /* Asegura que la imagen no desborde */
+  height: auto;
+  display: block;
+  margin: 0 auto; /* Centra la imagen en su columna */
+}
+
+/* Texto a la derecha */
+div#info_producto {
+  padding: 20px;
+  text-align: justify;
+  display: flex;
+  flex-direction: column;
+  justify-content: center; /* Centra el texto verticalmente */
+}
+
+/* Valoraciones debajo */
+div#valoraciones_producto {
+  margin-top: 20px;
+  text-align: justify;
+}
+
+div.valoracion {
+  margin-top: 10px;
+  padding: 10px;
+}
+
+/* Media Query para pantallas pequeñas */
+@media (max-width: 900px) {
+  div#producto {
+    grid-template-columns: 1fr; /* Cambia a una columna */
+  }
+
+  div#imagen_producto,
+  div#info_producto {
+    text-align: center; /* Centra el contenido en pantallas pequeñas */
+  }
+
+  div#info_producto {
+    padding: 10px; /* Reduce el padding para dispositivos más pequeños */
+  }
+}
+
+
+/*carrusel*/
+.carousel-container {
+  position: relative;
+  width: 100%;
+  max-width: 500px;
+  margin: 0 auto;
+  overflow: hidden;
+}
+
+.carousel-images {
+  display: flex;
+  transition: transform 0.5s ease-in-out;
+  width: 100%;
+}
+
+.carousel-image {
+  min-width: 100%;
+  height: auto;
+  display: block;
+}
+
+.carousel-button {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: rgba(0, 0, 0, 0.5);
+  color: white;
+  border: none;
+  font-size: 2rem;
+  padding: 10px;
+  padding-top: 6px;
+  cursor: pointer;
+  z-index: 100;
+  border-radius: 10px;
+}
+
+.carousel-button.prev {
+  left: 10px;
+}
+
+.carousel-button.next {
+  right: 10px;
+}

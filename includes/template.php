@@ -9,7 +9,7 @@ session_start();
 <head>
     <title><?php echo $titulo; ?></title>
     <link rel="icon" href="<?= RUTA_IMG ?>/logo mini.png">
-    <link rel="stylesheet" type="text/css" href="<?php echo RUTA_INCLUDES?>/estilos.css" />
+    <link rel="stylesheet" type="text/css" href="<?php echo RUTA_INCLUDES?>/css/estilos.css" />
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 </head>
 <body>
