@@ -27,7 +27,8 @@ SET time_zone = "+00:00";
 --
 
 INSERT INTO `img_producto` (`ID`, `img1`, `img2`, `img3`, `img4`, `img5`, `img6`) VALUES
-(1, 'BN solo.jpg', 'Endless delante.jpg', 'Rosa solo.jpg', 'Endless playa.JPG', 'Endless playa del.jpg', 'Endless playa2.jpg');
+(1, 'BN solo.JPG', 'Endless delante.JPG', 'Rosa solo.JPG', 'Endless playa.JPG', 'Endless playa del.JPG', 'Endless playa2.JPG'),
+(2, 'Azul solo.JPG', 'Porkwax delante.JPG', 'Lima solo.JPG', 'Porkwax playa.JPG', 'Porkwax playa del.JPG', 'Porkwax playa2.JPG');
 
 --
 -- Volcado de datos para la tabla `productos`

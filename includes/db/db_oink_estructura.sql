@@ -46,10 +46,10 @@ CREATE TABLE `img_producto` (
 
 CREATE TABLE `productos` (
   `ID_Producto` int(10) UNSIGNED NOT NULL,
-  `Nombre` varchar(20) NOT NULL,
+  `Nombre` varchar(50) NOT NULL,
   `Descripcion` varchar(500) NOT NULL,
   `Precio` float NOT NULL,
-  `Imagen` varchar(30) NOT NULL
+  `Imagen` varchar(50) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
