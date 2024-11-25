@@ -10,11 +10,9 @@ $contenido = <<<EOS
                     <form action="login.php" method="post">
                         <label for="usuario">Usuario:</label>
                         <input type="text" id="usuario" name="usuario" required>
-                        <label for="mail">Email:</label>
-                        <input type="text" id="mail" name="mail" required>
+                        <label for="email">Email:</label>
+                        <input type="email" id="email" name="email" required>
                         <label for="clave">Clave:</label>
-                        <input type="password" id="clave" name="clave" required>
-                        <label for="clave2">Repite clave:</label>
                         <input type="password" id="clave" name="clave" required>
                         <input type="submit" value="Registrarse">
                     </form>

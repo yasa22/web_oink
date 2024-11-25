@@ -485,7 +485,8 @@ div#login label {
 }
 
 div#login input[type="text"],
-div#login input[type="password"] {
+div#login input[type="password"],
+div#login input[type="email"] {
   width: 100%; /* Asegura que ocupe el ancho completo del contenedor */
   padding: 10px;
   margin-bottom: 15px; /* Separación uniforme */
