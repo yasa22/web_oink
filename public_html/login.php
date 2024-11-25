@@ -6,7 +6,7 @@ $contenido = <<<EOS
         <article>
             <section>
                 <div id='login'>
-                    <h1>LOGIN</h1>
+                    <h1>INICIO DE SESIÓN</h1>
                     <form action="login.php" method="post">
                         <label for="usuario">Usuario:</label>
                         <input type="text" id="usuario" name="usuario" required>

@@ -454,3 +454,74 @@ div.valoracion {
 .carousel-button.next {
   right: 10px;
 }
+
+div#login {
+  max-width: 400px; /* Limita el ancho para centrar y hacerlo más compacto */
+  margin: 100px auto; /* Centra el contenedor en la página */
+  padding: 30px; /* Reduce un poco el padding */
+  font-size: 18px;
+  text-align: left; /* Cambia a left para mejor legibilidad */
+  background-color: #ffffff;
+  box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.2); /* Sombra para destacar */
+  border-radius: 10px; /* Bordes redondeados */
+  color: #000000;
+  box-sizing: border-box; /* Para evitar problemas con el padding */
+}
+
+div#login h1 {
+  text-align: center; /* Título centrado */
+  font-size: 24px;
+  margin-bottom: 20px;
+}
+
+div#login form {
+  display: flex;
+  flex-direction: column; /* Asegura que los inputs se apilen */
+}
+
+div#login label {
+  margin-bottom: 8px;
+  font-weight: bold; /* Destaca las etiquetas */
+}
+
+div#login input[type="text"],
+div#login input[type="password"] {
+  width: 100%; /* Asegura que ocupe el ancho completo del contenedor */
+  padding: 10px;
+  margin-bottom: 15px; /* Separación uniforme */
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 16px;
+  background-color: #f8f8f8;
+  box-sizing: border-box;
+}
+
+div#login input[type="submit"] {
+  padding: 12px;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+  cursor: pointer;
+  color: #ffffff;
+  background-color: #4CAF50; /* Verde para un look más atractivo */
+  transition: background-color 0.3s ease; /* Suave transición */
+}
+
+div#login input[type="submit"]:hover {
+  background-color: #45a049; /* Un verde más oscuro al pasar el mouse */
+}
+
+div#login h2 {
+  margin-top: 20px;
+  text-align: center;
+  font-size: 16px;
+}
+
+div#login h2 a {
+  color: #4CAF50; /* Mismo color que el botón */
+  text-decoration: none; /* Sin subrayado */
+}
+
+div#login h2 a:hover {
+  text-decoration: underline; /* Subrayado al pasar el mouse */
+}
