@@ -8,7 +8,7 @@ require_once RAIZ_APP . '/includes/Img_producto.php';
 $producto_id = $_GET['id'];
 $producto = Producto::getProducto($producto_id);
 
-$titulo  = "Detalles del producto";
+$titulo = "Tienda Oink!";
 $ruta = RUTA_IMG . '/db/' . $producto->getImagen();
 $nombre = $producto->getNombre();
 $descripcion = $producto->getDescripcion();
@@ -28,7 +28,7 @@ $contenido = <<<EOS
 EOS;
 
 // Agregar imágenes al carrusel
-for ($i = 1; $i <= 3; $i++) {
+for ($i = 1; $i <= 6; $i++) {
     if (!empty($resultado["img$i"])) {
         $imgSrc = RUTA_IMG . '/db/' . $resultado["img$i"];
         $contenido .= "<img src='$imgSrc' class='carousel-image' alt='Imagen del producto $i'>";
@@ -87,23 +87,56 @@ require_once RAIZ_APP . '/includes/template.php';
 ?>
 
 <!-- Script JavaScript -->
+<!-- Script JavaScript -->
 <script>
-let currentIndex = 0;
+  // Selección de elementos
+  const carouselContainer = document.querySelector('.carousel-container');
+  const carouselImages = document.querySelector('.carousel-images');
+  const carouselButtons = document.querySelectorAll('.carousel-button');
+  let index = 0;
+  const images = document.querySelectorAll('.carousel-image');
+  const totalImages = images.length;
 
-function moveCarousel(direction) {
-    const images = document.querySelector('.carousel-images');
-    const totalImages = images.children.length;
-    currentIndex += direction;
+  let autoSlide; // Variable para almacenar el intervalo
 
-    // Ciclar el índice si está fuera de rango
-    if (currentIndex < 0) {
-        currentIndex = totalImages - 1;
-    } else if (currentIndex >= totalImages) {
-        currentIndex = 0;
-    }
+  // Función para mostrar la imagen actual
+  function showImage(newIndex) {
+    index = (newIndex + totalImages) % totalImages; // Asegura que el índice esté en rango
+    carouselImages.style.transform = `translateX(-${index * 100}%)`;
+  }
 
-    // Mover el carrusel
-    const offset = currentIndex * -100; // Desplazamiento en porcentaje
-    images.style.transform = `translateX(${offset}%)`;
-}
+  // Función para avanzar al siguiente slide
+  function moveToNextImage() {
+    showImage(index + 1);
+  }
+
+  // Función para retroceder al slide anterior
+  function moveToPrevImage() {
+    showImage(index - 1);
+  }
+
+  // Función para reiniciar el avance automático
+  function restartAutoSlide() {
+    clearInterval(autoSlide); // Limpia el intervalo existente
+    autoSlide = setInterval(moveToNextImage, 2000); // Crea un nuevo intervalo
+  }
+
+  // Event listeners para los botones
+  document.querySelector('.carousel-button.next').addEventListener('click', () => {
+    moveToNextImage();
+    restartAutoSlide(); // Reinicia el temporizador tras el clic
+  });
+  
+  document.querySelector('.carousel-button.prev').addEventListener('click', () => {
+    moveToPrevImage();
+    restartAutoSlide(); // Reinicia el temporizador tras el clic
+  });
+
+  // Inicializa el avance automático
+  autoSlide = setInterval(moveToNextImage, 2000);
+
+  // Pausar al pasar el mouse sobre el carrusel
+  carouselContainer.addEventListener('mouseenter', () => clearInterval(autoSlide));
+  carouselContainer.addEventListener('mouseleave', restartAutoSlide);
 </script>
+

@@ -1,7 +1,7 @@
 <div class="cabecera2">
     <div id='logoOink'>
         <a href="<?= RUTA_APP . '/index.php' ?>">
-            <img src="<?= RUTA_IMG . '/logo rosa.png' ?>" alt="Logo">
+            <img src="<?= RUTA_IMG . '/logoblanco.png' ?>" alt="Logo">
         </a>
     </div>
     <nav class='indice'>

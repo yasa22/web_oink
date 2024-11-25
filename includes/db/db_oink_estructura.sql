@@ -34,7 +34,8 @@ CREATE TABLE `img_producto` (
   `img2` varchar(30) NOT NULL,
   `img3` varchar(30) NOT NULL,
   `img4` varchar(30) NOT NULL,
-  `img5` varchar(30) NOT NULL
+  `img5` varchar(30) NOT NULL,
+  `img6` varchar(30) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 -- --------------------------------------------------------

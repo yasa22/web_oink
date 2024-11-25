@@ -356,7 +356,7 @@ div#detalles_producto {
   color: #000000;
   padding: 20px;
   padding-top: 100px;
-  width: 60%;
+  width: 80%;
 }
 
 div#producto {
@@ -415,7 +415,7 @@ div.valoracion {
 .carousel-container {
   position: relative;
   width: 100%;
-  max-width: 500px;
+  max-width: 700px;
   margin: 0 auto;
   overflow: hidden;
 }
@@ -427,6 +427,7 @@ div.valoracion {
 }
 
 .carousel-image {
+  border-radius: 10px;
   min-width: 100%;
   height: auto;
   display: block;

@@ -32,7 +32,7 @@ class Img_producto {
 
     public function getAllImg($producto_id) {
         try {
-            $stmt = $this->pdo->prepare("SELECT img1, img2, img3 FROM img_producto WHERE ID = :producto_id");
+            $stmt = $this->pdo->prepare("SELECT img1, img2, img3, img4, img5, img6 FROM img_producto WHERE ID = :producto_id");
             $stmt->bindParam(':producto_id', $producto_id, PDO::PARAM_INT);
             $stmt->execute();
             $result = $stmt->fetch(PDO::FETCH_ASSOC);
