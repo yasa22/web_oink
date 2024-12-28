@@ -527,3 +527,18 @@ div#login h2 a {
 div#login h2 a:hover {
   text-decoration: underline; /* Subrayado al pasar el mouse */
 }
+
+div#mensaje h2{
+  color: red;
+  text-align: center;
+}
+
+div#mensaje h3{
+  color: green;
+  text-align: center;
+}
+div#mensaje p, div#mensaje a {
+  color: green;
+  text-align: center;
+  font-weight: bold;
+}

@@ -1,4 +1,6 @@
 <?php
+session_start();
+
 require_once dirname(__DIR__) . '/includes/Aplicacion.php';
 
 // Define paths

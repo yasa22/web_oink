@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 24-11-2024 a las 19:12:39
+-- Tiempo de generación: 28-12-2024 a las 13:09:37
 -- Versión del servidor: 10.4.32-MariaDB
 -- Versión de PHP: 8.2.12
 
@@ -52,6 +52,18 @@ CREATE TABLE `productos` (
   `Imagen` varchar(50) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
+-- --------------------------------------------------------
+
+--
+-- Estructura de tabla para la tabla `usuario`
+--
+
+CREATE TABLE `usuario` (
+  `User` varchar(50) NOT NULL,
+  `contrasena` varchar(50) NOT NULL,
+  `correo` varchar(50) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
 --
 -- Índices para tablas volcadas
 --
@@ -67,6 +79,12 @@ ALTER TABLE `img_producto`
 --
 ALTER TABLE `productos`
   ADD PRIMARY KEY (`ID_Producto`);
+
+--
+-- Indices de la tabla `usuario`
+--
+ALTER TABLE `usuario`
+  ADD PRIMARY KEY (`nombreUsuario`);
 
 --
 -- AUTO_INCREMENT de las tablas volcadas
