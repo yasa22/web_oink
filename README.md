@@ -1,1 +1,1 @@
-![Banner](includes/img/logoBlanco.png)
+![Banner](includes/img/logoblanco.png)
